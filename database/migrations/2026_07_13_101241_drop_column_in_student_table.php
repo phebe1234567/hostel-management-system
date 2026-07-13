@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('student', function (Blueprint $table) {
+        Schema::table('students', function (Blueprint $table) {
             $table->dropForeign(['user_id']);
             $table->dropColumn('user_id');
             $table->string('password');
@@ -24,7 +24,7 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::table('student', function (Blueprint $table) {
+        Schema::table('students', function (Blueprint $table) {
             //
         });
     }
