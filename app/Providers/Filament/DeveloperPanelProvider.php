@@ -26,6 +26,7 @@ class DeveloperPanelProvider extends PanelProvider
         return $panel
             ->id('developer')
             ->path('developer')
+            ->login()
             ->colors([
                 'primary' => Color::Amber,
             ])

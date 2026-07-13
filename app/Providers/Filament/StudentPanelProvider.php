@@ -28,6 +28,8 @@ class StudentPanelProvider extends PanelProvider
             ->path('student')
             ->login()
             ->registration()
+            ->authPasswordBroker('students')
+            ->authGuard('student')
             ->colors([
                 'primary' => Color::Amber,
             ])
