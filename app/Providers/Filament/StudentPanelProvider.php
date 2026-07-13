@@ -26,6 +26,8 @@ class StudentPanelProvider extends PanelProvider
         return $panel
             ->id('student')
             ->path('student')
+            ->login()
+            ->registration()
             ->colors([
                 'primary' => Color::Amber,
             ])
