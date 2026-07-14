@@ -8,6 +8,7 @@ use Filament\Forms\Components\TextInput;
 use Filament\Schemas\Schema;
 use Filament\Notifications\Notification;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Hash;
 
 
 class Register extends PagesRegister
@@ -41,7 +42,7 @@ class Register extends PagesRegister
             'email' => $data['email'],
             'phone' => $data['phone'],
             'course_of_study' => $data['course_of_study'],
-            'password' => hash:make($data['password']),
+            'password' => Hash::make($data['password']),
         ]);
        Notification::make()
             ->title('Registration Successful')
