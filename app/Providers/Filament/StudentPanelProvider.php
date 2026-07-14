@@ -27,7 +27,7 @@ class StudentPanelProvider extends PanelProvider
             ->id('student')
             ->path('student')
             ->login()
-            ->registration()
+            ->registration(\App\Filament\Student\Pages\Register::class)
             ->authPasswordBroker('students')
             ->authGuard('student')
             ->colors([
