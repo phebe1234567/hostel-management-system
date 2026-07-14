@@ -41,7 +41,7 @@ class Register extends PagesRegister
             'email' => $data['email'],
             'phone' => $data['phone'],
             'course_of_study' => $data['course_of_study'],
-            'password' => bcrypt($data['password']),
+            'password' => hash($data['password']),
         ]);
        Notification::make()
             ->title('Registration Successful')
